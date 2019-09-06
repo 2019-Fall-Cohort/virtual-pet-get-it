@@ -27,11 +27,15 @@ describe("Application", () => {
             const isOff = funGame.isOn;
             //Assert
             expect(isOff).toBeTruthy
+
+    
         })
     });
 })
 
-const checkProp = (prop) => {
+
+// Might use if accessing default properties a ton
+const checkDefaultProp = (prop) => {
     //Check default value of given property
     //Assert
     const funGame = new App();
