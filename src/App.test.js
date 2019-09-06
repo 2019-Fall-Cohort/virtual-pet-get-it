@@ -8,7 +8,7 @@ describe("Application", () => {
             //Act
             const notOn = funGame.isOn;
             //Assert
-            expect(notOn).toBeTruthy();
+            expect(notOn).toBeFalsy();
         });
         test("quitGame changes isOn property to 'false'", () => {
             //Arrange
@@ -26,7 +26,16 @@ describe("Application", () => {
             funGame.startGame();
             const isOff = funGame.isOn;
             //Assert
-            expect(isOff).toBeTruthy();
-        });
+            expect(isOff).toBeTruthy
+        })
     });
 })
+
+const checkProp = (prop) => {
+    //Check default value of given property
+    //Assert
+    const funGame = new App();
+    //Act
+    const propCheck = funGame[prop];
+    return propCheck;
+}
