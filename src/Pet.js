@@ -1,10 +1,16 @@
 class Pet { 
     constructor(){
-        this.hunger = 0    
+        this.hunger = 100
+        this.boredom = 100  
     }
-    getHungry() {
-        this.hunger += 10
+   
+    feed() {
+        this.hunger -= 10
     } 
+    play() {
+        this.boredom -= 10
+    }
+    
 }
 
 module.exports = Pet
