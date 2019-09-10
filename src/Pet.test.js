@@ -9,8 +9,6 @@ describe("Pet", ()=> {
             underTest.feed() 
             //Assert
             expect(underTest.hunger).toEqual(currentHunger - 10);
-
-      
         })
     }) 
     describe("play",()=> {
@@ -21,8 +19,7 @@ describe("Pet", ()=> {
             underTest.play()
             //Assert
             expect(underTest.boredom).toEqual(currentBoredom - 10);
-        }
-        
+        })
     })
 })
     

@@ -12,7 +12,6 @@ class App {
         // this.startMenu();
     }
     // pet methodz
-    
     feedPet() {
         {food}
     }

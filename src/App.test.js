@@ -24,15 +24,15 @@ describe("Application", () => {
         });
     });
     describe("startMenuProceed", () => {
-        test("startMenuProceed changes isOn to 'true'") 
+        test("startMenuProceed changes isOn to 'true' when passed 'y'", () => { 
             //Arrange
             const funGame = new App();
             //Act
-            funGame.startMenuProceed("fcukshitfuck");
+            funGame.startMenuProceed("y");
             //Assert
             expect(funGame.isOn).toBeTruthy()
+        })
     });
-
         // Too mind-blowing; object interaction
         // test("expect feedPet to return 5 above original value", () => {
         //     //Arrange
@@ -42,5 +42,4 @@ describe("Application", () => {
         //     //Assert
         //     expect("DISAPPOINTMENT")
         // });
-    });
 });
