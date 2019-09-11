@@ -51,3 +51,12 @@ if (require.main == module) {
     const newApp = new App();
     console.log(newApp);
 }
+
+const testing = input.promptLoop("Test case hit 'y'", (val) => {
+    if (val === 'y') {
+        return true;
+    }
+    return false;
+})
+
+module.exports = testing;

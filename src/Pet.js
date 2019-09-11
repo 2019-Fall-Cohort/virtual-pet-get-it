@@ -3,9 +3,7 @@ class Pet {
         this.hunger = getRandomInt(50,100);
         this.boredom = getRandomInt(50,100);
         //this.hunger = 100
-        
     }
-   
     feed() {
         this.hunger -= 10
     } 
