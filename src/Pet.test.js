@@ -21,5 +21,13 @@ describe("Pet", ()=> {
             expect(underTest.boredom).toEqual(currentBoredom - 10);
         })
     })
+    describe('renamePet', () => {
+        test('should rename name property with "Oscar"', () => {
+            //Act
+            underTest.renamePet("Oscar");
+            //Assert
+            expect(underTest.name).toBe("Oscar");
+        });
+    });
 })
     

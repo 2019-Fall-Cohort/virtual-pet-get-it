@@ -1,14 +1,19 @@
 class Pet { 
-    constructor(){
+    constructor(name="Jessica", id){
+        this.name = name;
+        this.id = id
         this.hunger = getRandomInt(50,100);
         this.boredom = getRandomInt(50,100);
         //this.hunger = 100
     }
     feed() {
-        this.hunger -= 10
+        this.hunger -= 10;
     } 
     play() {
-        this.boredom -= 10
+        this.boredom -= 10;
+    }
+    renamePet(newName) {
+        this.name = newName;
     }
 }
 
