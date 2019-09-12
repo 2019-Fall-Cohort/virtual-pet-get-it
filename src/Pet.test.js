@@ -45,5 +45,16 @@ describe("Pet", ()=> {
             expect(underTest.sickness).toEqual(0);
         });
     });
+    describe('checkSickness', () => {
+        test('should change isSick to "false" if sickness greaterthan 70', () => {
+            //Arrange
+            underTest.makeSick(70);
+            //Act
+            underTest.checkSickness();
+            //Assert
+            expect(underTest.isSick).toBeTruthy();
+        });
+    });
+    
 })
     

@@ -21,8 +21,15 @@ class Pet {
     setAdopted() {
         this.isAdopted = true;
     }
+    // Health Methods
     takeToDoctor() {
         this.sickness = 0;
+    }
+    makeSick(illness = 5) {
+        this.sickness += illness;
+        if (this.sickness > 100) {
+            this.sickness = 100;
+        }
     }
     checkSickness() {
         if (this.sickness >= 70 ) {

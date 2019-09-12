@@ -13,7 +13,7 @@ class App {
     }
     // pet methodz
     feedPet() {
-        {food}
+        // Will feed the pet
     }
 
     startMenu(startMenuInput = "n") {

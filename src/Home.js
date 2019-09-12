@@ -5,8 +5,10 @@ class Home {
     constructor(userName) {
         this.userName = userName;
         this.pets = [];
-        this.
         this.cage = new Cages;
+    }
+    addPet(pet) {
+        this.pets.push(pet);
     }
     getPetNames() {
         const petNames = [];
