@@ -10,7 +10,7 @@ class Cages {
         this.isDirty = false;
         successMsg = "this message"
     } 
-    getDirty(poop) {
+    sullyCage(poop) {
         // Add <Num> poop to current poopiness property
         this.poopiness += poop;
     }

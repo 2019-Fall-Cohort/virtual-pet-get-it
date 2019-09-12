@@ -12,8 +12,8 @@ describe("Cages", () => {
             expect(underTest.isDirty).toBeFalsy();
         });
     });
-    describe("getDirty", () => {
-        test("getDirty increases poopiness prop by 5", () => {
+    describe("sullyCage", () => {
+        test("sullyCage increases poopiness prop by 5", () => {
             //Arrange
             let currentPoopiness = underTest.poopiness;
             //Act
@@ -23,12 +23,12 @@ describe("Cages", () => {
         })
     })
     describe("setDirty", () => {   
-        test("isDirty changes isOn property to 'false'", () => {
-            //Arrange
-
+        test("setDirty changes isDirty property to 'true' when poopiness set to > 70", () => {
             //Act
-            
+            underTest.sullyCage(70)
+            underTest.setDirty;
             //Assert
-            
+            expect(underTest.poopiness).toBeTruthy();
         });
     });
+})
