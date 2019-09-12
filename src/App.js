@@ -47,16 +47,16 @@ class App {
 
 module.exports = App;
 
-if (require.main == module) {
-    const newApp = new App();
-    console.log(newApp);
-}
+// if (require.main == module) {
+//     const newApp = new App();
+//     console.log(newApp);
+// }
 
-const testing = input.promptLoop("Test case hit 'y'", (val) => {
-    if (val === 'y') {
-        return true;
-    }
-    return false;
-})
+// const testing = input.promptLoop("Test case hit 'y'", (val) => {
+//     if (val === 'y') {
+//         return true;
+//     }
+//     return false;
+// })
 
-module.exports = testing;
+// module.exports = testing;

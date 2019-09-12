@@ -29,5 +29,21 @@ describe("Pet", ()=> {
             expect(underTest.name).toBe("Oscar");
         });
     });
+    describe('setAdopted', () => {
+        test('should change isAdopted prop to True', () => {
+            //Act
+            underTest.setAdopted();
+            //Assert
+            expect(underTest.isAdopted).toBeTruthy();
+        });
+    });
+    describe('takeToDoctor', () => {
+        test('should set sickness to 0', () => {
+            //Act
+            underTest.takeToDoctor();
+            //Assert
+            expect(underTest.sickness).toEqual(0);
+        });
+    });
 })
     

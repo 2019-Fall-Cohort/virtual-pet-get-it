@@ -4,11 +4,11 @@ class Cages {
     constructor(){
         this.isDirty = true;
         this.poopiness = 5;
+        
     }
     cleanCages() {
         this.poopiness = 0;
         this.isDirty = false;
-        successMsg = "this message"
     } 
     sullyCage(poop) {
         // Add <Num> poop to current poopiness property
@@ -21,6 +21,7 @@ class Cages {
     }
 }
 
+module.exports = Cages
 /* cleanCages(cleanCageInput = "y") {
     if (cleanCageInput === "y"){
         this.isOn()
@@ -44,4 +45,3 @@ class Cages {
 }
 } */
 
-module.exports = Cages

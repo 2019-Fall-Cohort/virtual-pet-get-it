@@ -4,6 +4,9 @@ class Pet {
         this.id = id
         this.hunger = getRandomInt(50,100);
         this.boredom = getRandomInt(50,100);
+        this.sickness = getRandomInt(0,50);
+        this.isSick = false;
+        this.isAdopted = false;
         //this.hunger = 100
     }
     feed() {
@@ -14,6 +17,17 @@ class Pet {
     }
     renamePet(newName) {
         this.name = newName;
+    }
+    setAdopted() {
+        this.isAdopted = true;
+    }
+    takeToDoctor() {
+        this.sickness = 0;
+    }
+    checkSickness() {
+        if (this.sickness >= 70 ) {
+            this.isSick = true;
+        }
     }
 }
 
