@@ -2,17 +2,26 @@ const input = require('readline-sync');
 
 class Cages { 
     constructor(){
-        this.isDirty = true
+        this.isDirty = true;
+        this.poopiness = 5;
     }
-    cleanCage() {
-        this.isOn = false;
+    cleanCages() {
+        this.poopiness = 0;
+        this.isDirty = false;
+        successMsg = "this message"
     } 
-    isDirty() {
-        this.isOn = true;
+    getDirty(poop) {
+        // Add <Num> poop to current poopiness property
+        this.poopiness += poop;
+    }
+    setDirty() {
+        if (this.poopiness >= 70) {
+            this.isDirty = true;
+        }
     }
 }
 
-cleanCage(cleanCageInput = "y") {
+/* cleanCages(cleanCageInput = "y") {
     if (cleanCageInput === "y"){
         this.isOn()
         console.log("Hooray, your pet cages are clean!")
@@ -33,7 +42,6 @@ cleanCage(cleanCageInput = "y") {
         }
     }
 }
-}
+} */
 
 module.exports = Cages
-
