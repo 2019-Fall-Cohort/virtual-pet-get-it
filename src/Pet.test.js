@@ -21,5 +21,40 @@ describe("Pet", ()=> {
             expect(underTest.boredom).toEqual(currentBoredom - 10);
         })
     })
+    describe('renamePet', () => {
+        test('should rename name property with "Oscar"', () => {
+            //Act
+            underTest.renamePet("Oscar");
+            //Assert
+            expect(underTest.name).toBe("Oscar");
+        });
+    });
+    describe('setAdopted', () => {
+        test('should change isAdopted prop to True', () => {
+            //Act
+            underTest.setAdopted();
+            //Assert
+            expect(underTest.isAdopted).toBeTruthy();
+        });
+    });
+    describe('takeToDoctor', () => {
+        test('should set sickness to 0', () => {
+            //Act
+            underTest.takeToDoctor();
+            //Assert
+            expect(underTest.sickness).toEqual(0);
+        });
+    });
+    describe('checkSickness', () => {
+        test('should change isSick to "false" if sickness greaterthan 70', () => {
+            //Arrange
+            underTest.makeSick(70);
+            //Act
+            underTest.checkSickness();
+            //Assert
+            expect(underTest.isSick).toBeTruthy();
+        });
+    });
+    
 })
     

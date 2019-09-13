@@ -17,11 +17,11 @@ describe("Cages", () => {
             //Arrange
             let currentPoopiness = underTest.poopiness;
             //Act
-            underTest.getDirty(5);
+            underTest.sullyCage(5);
             //Assert
             expect(underTest.poopiness).toEqual(currentPoopiness + 5);
-        })
-    })
+        });
+    });
     describe("setDirty", () => {   
         test("setDirty changes isDirty property to 'true' when poopiness set to > 70", () => {
             //Act
@@ -31,4 +31,4 @@ describe("Cages", () => {
             expect(underTest.poopiness).toBeTruthy();
         });
     });
-})
+});
