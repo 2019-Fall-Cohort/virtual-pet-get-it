@@ -5,16 +5,13 @@ class Pet {
         }
         this.name = name;
         this.id = id
-        this.hunger = getRandomInt(50,100);
         this.boredom = getRandomInt(50,100);
-        this.sickness = getRandomInt(0,50);
-        this.isSick = false;
+        // this.hunger = getRandomInt(50,100);
+        // this.sickness = getRandomInt(0,50);
+        // this.isSick = false;
         this.isAdopted = false;
         //this.hunger = 100
     }
-    feed() {
-        this.hunger -= 10;
-    } 
     play() {
         this.boredom -= 10;
     }
@@ -24,20 +21,23 @@ class Pet {
     setAdopted() {
         this.isAdopted = true;
     }
-    // Health Methods
-    takeToDoctor() {
-        this.sickness = 0;
-    }
-    makeSick(illness = 5) {
-        this.sickness += illness;
-        if (this.sickness > 100) {
-            this.sickness = 100;
-        }
-    }
-    checkSickness() {
-        if (this.sickness >= 70 ) {
-            this.isSick = true;
-        }
+    // feed() {
+    //     this.hunger -= 10;
+    // } 
+    // // Health Methods
+    // takeToDoctor() {
+    //     this.sickness = 0;
+    // }
+    // makeSick(illness = 5) {
+    //     this.sickness += illness;
+    //     if (this.sickness > 100) {
+    //         this.sickness = 100;
+    //     }
+    // }
+    // checkSickness() {
+    //     if (this.sickness >= 70 ) {
+    //         this.isSick = true;
+    //     }
     }
 }
 
