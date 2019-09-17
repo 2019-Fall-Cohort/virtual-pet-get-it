@@ -1,5 +1,5 @@
 const Home = require('./Home');
-const Pet = require('./Pet');
+const Pet = require('./OrganicPet');
 describe("Home", () => {
     const underTest = new Home();
     describe("getPetNames", () => {
