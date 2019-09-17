@@ -45,3 +45,13 @@ const getRandomInt = (min, max) => {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
   }
+
+  class OrganicPet extends Pet {
+  }
+
+  if (require.main == module) {
+      const Jessica = new OrganicPet("OrganicTestJessica", 12345);
+      console.log(Jessica);
+      Jessica.takeToDoctor();
+      console.log(Jessica);
+  }
