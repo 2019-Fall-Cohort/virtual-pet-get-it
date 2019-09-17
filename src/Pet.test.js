@@ -1,6 +1,8 @@
-const Pet = require("./Pet");
+// Pet is now Abstract af
+// const Pet = require("./Pet"); 
+const OrganicPet = require("./OrganicPet");
 describe("Pet", ()=> {
-    const underTest = new Pet();
+    const underTest = new OrganicPet("Jessica", 1);
     describe("feed", ()=> { 
         test("should hunger decrease by 10", () => {
             //Arrange
@@ -23,9 +25,12 @@ describe("Pet", ()=> {
     })
     describe('renamePet', () => {
         test('should rename name property with "Oscar"', () => {
+            //Arrange
+            let currentName = underTest.name;
             //Act
             underTest.renamePet("Oscar");
             //Assert
+            expect(currentName).toBe("Jessica"); // Check that it defaults to Jessica
             expect(underTest.name).toBe("Oscar");
         });
     });
