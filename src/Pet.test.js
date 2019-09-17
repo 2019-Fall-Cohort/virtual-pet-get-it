@@ -1,6 +1,8 @@
-const Pet = require("./Pet");
+// Pet is now Abstract af
+// const Pet = require("./Pet"); 
+const OrganicPet = require("./OrganicPet");
 describe("Pet", ()=> {
-    const underTest = new Pet();
+    const underTest = new OrganicPet("Jessica", 1);
     describe("feed", ()=> { 
         test("should hunger decrease by 10", () => {
             //Arrange
