@@ -1,5 +1,8 @@
 class Pet { 
     constructor(name="Jessica", id){
+        if (this.constructor == Pet) {
+            throw new Error("Don't use this Class, what're you thinking?");
+        }
         this.name = name;
         this.id = id
         this.hunger = getRandomInt(50,100);
@@ -46,12 +49,9 @@ const getRandomInt = (min, max) => {
     return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
   }
 
-  class OrganicPet extends Pet {
-  }
-
-  if (require.main == module) {
+  /* if (require.main == module) {
       const Jessica = new OrganicPet("OrganicTestJessica", 12345);
       console.log(Jessica);
       Jessica.takeToDoctor();
       console.log(Jessica);
-  }
+  } */

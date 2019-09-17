@@ -23,9 +23,12 @@ describe("Pet", ()=> {
     })
     describe('renamePet', () => {
         test('should rename name property with "Oscar"', () => {
+            //Arrange
+            let currentName = underTest.name;
             //Act
             underTest.renamePet("Oscar");
             //Assert
+            expect(currentName).toBe("Jessica"); // Check that it defaults to Jessica
             expect(underTest.name).toBe("Oscar");
         });
     });
