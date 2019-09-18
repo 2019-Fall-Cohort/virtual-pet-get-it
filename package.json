@@ -1,0 +1,26 @@
+{
+  "name": "wcii-group2-module1",
+  "version": "1.0.0",
+  "description": "Repo for Virtual Pets Amok project",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --colors --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bnwilson/wcii-group2-module1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bnwilson/wcii-group2-module1/issues"
+  },
+  "homepage": "https://github.com/bnwilson/wcii-group2-module1#readme",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
