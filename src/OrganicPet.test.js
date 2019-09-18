@@ -20,22 +20,32 @@ describe("OrganicPet", () => {
             expect(underTest.sickness).toEqual(0);
         });
     });
-    describe(`makeSick`, () => {
+    describe(`gettingSick`, () => {
         test('should increase illness by 5', () => {
             //Act
-            underTest.makeSick()
+            underTest.gettingSick()
             //Assert
             expect(underTest.sickness).toEqual(sickness + 5);
         }); 
     });
     describe('checkSickness', () => {
-        test('should change isSick to "false" if sickness greaterthan 70', () => {
+        test('should change isSick to "true" if sickness greaterthan 70', () => {
             //Arrange
             underTest.makeSick(70);
             //Act
             underTest.checkSickness();
             //Assert
             expect(underTest.isSick).toBeTruthy();
+        });
+    });
+    describe('gettingHungry', () => {
+        test('should increase hunger by 10', () => {
+            //Arrange
+            let currentHunger = underTest.hunger;
+            //Act
+            underTest.gettingHungry();
+            //Assert
+            expect(underTest.hunger).toEqual(currentHunger + 10);
         });
     });
 });

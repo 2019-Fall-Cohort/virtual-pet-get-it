@@ -9,12 +9,21 @@ class OrganicPet extends Pet {
     }
     feed() {
         this.hunger -= 10;
-    } 
+        if (this.hunger > 0) {
+            this.hunger = 0;
+        } 
+    }
+    gettingHungry() {
+        this.hunger += 10;
+        if (this.hunger > 0) {
+            this.hunger = 0;
+        }
+    }
     // Health Methods
     takeToDoctor() {
         this.sickness = 0;
     }
-    makeSick(illness = 5) {
+    gettingSick(illness = 5) {
         this.sickness += illness;
         if (this.sickness > 100) {
             this.sickness = 100;
@@ -24,6 +33,12 @@ class OrganicPet extends Pet {
         if (this.sickness >= 70 ) {
             this.isSick = true;
         }
+    }
+    tick() {
+        this.gettingHungry();
+        this.gettingSick();
+        this.checkSickness();
+        this.gettingBored();
     }
 }
 

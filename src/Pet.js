@@ -10,13 +10,22 @@ class Pet {
     }
     play() {
         this.boredom -= 10;
+        if (this.boredom > 0) {
+            this.boredom = 0;
+        }
+    }
+    gettingBored() {
+        this.boredom += 10;
+        if (this.boredom > 100) {
+            this.boredom = 100;
+        }
     }
     renamePet(newName) {
         this.name = newName;
     }
     setAdopted() {
         this.isAdopted = true;
-        this.cage = new Cage
+        this.cage = new Cage();
     }
 }
 

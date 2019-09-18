@@ -32,5 +32,16 @@ describe("Pet", ()=> {
             expect(underTest.isAdopted).toBeTruthy();
         });
     });
+    describe('gettingBored', () => {
+        test('should increase bored property by 10', () => {
+            //Arrange
+            let currentBoredom = underTest.boredom;
+            //Act
+            underTest.gettingBored();
+            //Assert
+            expect(underTest.boredom).toEqual(currentBoredom + 10);
+        });
+    });
+
 })
     
