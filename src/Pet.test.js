@@ -1,18 +1,8 @@
-// Pet is now Abstract af
 // const Pet = require("./Pet"); 
 const OrganicPet = require("./OrganicPet");
 describe("Pet", ()=> {
     const underTest = new OrganicPet("Jessica", 1);
-    describe("feed", ()=> { 
-        test("should hunger decrease by 10", () => {
-            //Arrange
-            let currentHunger = underTest.hunger
-            //Act
-            underTest.feed() 
-            //Assert
-            expect(underTest.hunger).toEqual(currentHunger - 10);
-        })
-    }) 
+
     describe("play",()=> {
         test("should decrease boredom by 10", () => {
             //Arrange
@@ -42,24 +32,5 @@ describe("Pet", ()=> {
             expect(underTest.isAdopted).toBeTruthy();
         });
     });
-    describe('takeToDoctor', () => {
-        test('should set sickness to 0', () => {
-            //Act
-            underTest.takeToDoctor();
-            //Assert
-            expect(underTest.sickness).toEqual(0);
-        });
-    });
-    describe('checkSickness', () => {
-        test('should change isSick to "false" if sickness greaterthan 70', () => {
-            //Arrange
-            underTest.makeSick(70);
-            //Act
-            underTest.checkSickness();
-            //Assert
-            expect(underTest.isSick).toBeTruthy();
-        });
-    });
-    
 })
     
