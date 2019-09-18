@@ -1,12 +1,12 @@
-const Cages = require('./Cages');
+const Cages = require('./Cage');
 
-describe("Cages", () => {
+describe("Cage", () => {
     //Arrange
-    const underTest = new Cages();
-    describe("cleanCages", () => {
-        test("cleanCages changes isDirty property to 'false' and poopiness property to 0", () => {
+    const underTest = new Cage();
+    describe("cleanCage", () => {
+        test("cleanCage changes isDirty property to 'false' and poopiness property to 0", () => {
             //Act
-            underTest.cleanCages();
+            underTest.cleanCage();
             //Assert
             expect(underTest.poopiness).toEqual(0);
             expect(underTest.isDirty).toBeFalsy();
