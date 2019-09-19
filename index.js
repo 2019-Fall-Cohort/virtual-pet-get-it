@@ -7,36 +7,116 @@ const Shelter = require("./src/Shelter");
 const Cage = require("./src/Cage");
 
 //Initial App Setup
-const Shelter = new Shelter();
-Shelter.addOrganicPet(newOrganicPet("Jessica", id));
+const petJail = new Shelter();
+petJail.admitPet(new OrganicPet("Jessica", 7));
 
-let displayText = "*~*~*~*~*~*~*~*~*~*~*~*~*~*~*\n" +
+const displayText = "*~*~*~*~*~*~*~*~*~*~*~*~*~*~*\n" +
 "~ Awesome Virtual Pet Amok! ~\n" +
 "*~*~*~*~*~*~*~*~*~*~*~*~*~*~*";
 let appRunning = true;
+let userSelection = "";
 
 while (appRunning) {
-console.log(displayText);
-console.log();
-console.log();
-console.log("1 - View Your Pets");
-console.log();
-console.log("2 - Adopt a Pet");
-console.log();
-console.log("3 - Read Game Reviews");
-console.log();
-console.log("4 - Quit Game");
-console.log();
-
-const userSelection = input.question( 
-    "Please select an option"
+    printStartMenu()
+    let userSelection = input.question( 
+        "Please select an option \n"
     );
+    switch (userSelection) {
+        
+        case "1": 
+            printAvailablePets();
+            break;
 
+        case "2": 
+            adoptPet(name = "Jessica", id);
+            break;
+            
+        case "3": 
+            admitPet(name = "Jessica", id);
+            break;
+            
+        case "4": 
+            printPetStats();
+            break;
+
+        case "5": 
+            printPetCages();
+            break;
+
+        case "q":
+            appRunning = false;
+            break;
+
+        default:
+            break;
+    }
 }
 
-// This is where the main application/user interface will be developed
-// options = [ “optionOne", “optionTwo", etc…]
+function printAvailablePets() {
+    const pets = petJail.getPetNamesById();
+    pets.forEach(pet => {
+       console.log(`${pet}`);
+    });
+}
 
-// prompt = console.log(options.forEach((x, y) => {
-//     console.log(`${y} - ${x}`);
-// })
+// function {
+
+// }
+
+// function{
+
+// }
+
+// function{
+
+// }
+
+// function{
+
+// }
+
+function Quit() {
+    isRunning = false;
+  }
+
+function printStartMenu() {
+    console.log(displayText);
+    console.log();
+    console.log();
+    console.log("1 - View Available Pets in Shelter");
+    console.log();
+    console.log("2 - Adopt a Pet");
+    console.log();
+    console.log("3 - Admit Pet to Shelter");
+    console.log();
+    console.log("4 - Interact with Pets");
+    console.log();
+    console.log("5 - View Your Pet Cage(s)");
+    console.log();
+    console.log("q - Quit Game");
+    console.log();
+}
+
+const printPetStats = () => {
+    console.log();
+    console.log("What would you like to do?");
+    console.log();
+    console.log("1 - Feed Pet");
+    console.log();
+    console.log("2 - Play With Pet");
+    console.log();
+    console.log("3 - Check Pet's Health");
+    console.log();
+    console.log("4 - Take Pet to Doctor");
+    console.log();
+    console.log("5 - Rename Pet");
+}
+
+const printPetCages = () => {
+    console.log("Clean Cage?");
+    console.log();
+    console.log("1 - Clean The Poop!");
+    console.log();
+    console.log("2 - Do Nothing...");
+    console.log();
+}

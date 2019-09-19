@@ -1,7 +1,7 @@
 class Pet { 
     constructor(name = "Jessica", id){
         if (this.constructor == Pet) {
-            throw new Error("Don't use this Class, what're you thinking?");
+            throw new Error("Don't use this Class! What are you thinking?");
         }
         this.name = name;
         this.id = id

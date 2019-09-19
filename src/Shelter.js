@@ -15,10 +15,17 @@ class Shelter {
     }
     getPetNames() {
         const petNames = [];
-        this.pets.forEach((x) => {
-            petNames.push(x.name);
+        this.pets.forEach((pet) => {
+            petNames.push(pet.name);
         })
         return petNames;
+    }
+    getPetNamesById() {
+        const getPetNamesById = [];
+        this.pets.forEach((pet, id) => {
+            getPetNamesById.push(`Pet Name: ${pet.name} ID #: ${id}`);
+        })
+        return getPetNamesById;
     }
     adoptPet(id) {
         this.pets.delete(id)

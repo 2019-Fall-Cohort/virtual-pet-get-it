@@ -4,6 +4,7 @@
   "description": "Repo for Virtual Pets Amok project",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "jest --colors --watchAll"
   },
   "repository": {
