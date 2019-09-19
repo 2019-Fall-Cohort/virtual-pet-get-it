@@ -1,20 +1,22 @@
 const input = require("readline-sync");
 
-const App = require("./src/App")
-const Pet = require("./src/Pet");
 const OrganicPet = require("./src/OrganicPet");
 const Shelter = require("./src/Shelter");
-const Cage = require("./src/Cage");
 
 //Initial App Setup
 const petJail = new Shelter();
-petJail.admitPet(new OrganicPet("Jessica", 7));
+petJail.admitPet(new OrganicPet("Jessica", 1));
+petJail.admitPet(new OrganicPet("Jessika", 2));
+petJail.admitPet(new OrganicPet("Jessyca", 3));
+petJail.admitPet(new OrganicPet("Yessica", 4));
+petJail.admitPet(new OrganicPet("Hot-Messika", 5));
+
+let appRunning = true;
 
 const displayText = "*~*~*~*~*~*~*~*~*~*~*~*~*~*~*\n" +
-"~ Awesome Virtual Pet Amok! ~\n" +
-"*~*~*~*~*~*~*~*~*~*~*~*~*~*~*";
-let appRunning = true;
-let userSelection = "";
+    "~ Awesome Virtual Pet Amok! ~\n" +
+    "*~*~*~*~*~*~*~*~*~*~*~*~*~*~*";
+console.log(displayText);
 
 while (appRunning) {
     printStartMenu()
@@ -28,19 +30,31 @@ while (appRunning) {
             break;
 
         case "2": 
-            adoptPet(name = "Jessica", id);
+            printAvailablePets();
+            while (userSelection !== "q") {
+                let (userSelection) = input.question(
+                    "Enter the ID of the pet you want to adopt out \n"
+                )
+            };
+            petJail.adoptPet();
             break;
             
         case "3": 
-            admitPet(name = "Jessica", id);
+            printAvailablePets();
+            while (userSelection !== "q") {
+               let (userSelection) = input.question(
+                    "Enter the ID of the pet you want to admit into shelter \n"
+                )
+            };  
+            petJail.admitPet();
             break;
             
         case "4": 
-            printPetStats();
+            interactWithPet();
             break;
 
         case "5": 
-            printPetCages();
+            cleanCage();
             break;
 
         case "q":
@@ -57,31 +71,9 @@ function printAvailablePets() {
     pets.forEach(pet => {
        console.log(`${pet}`);
     });
+    let userSelection = input.question ("Press 'Enter' to Continue")
 }
-
-// function {
-
-// }
-
-// function{
-
-// }
-
-// function{
-
-// }
-
-// function{
-
-// }
-
-function Quit() {
-    isRunning = false;
-  }
-
 function printStartMenu() {
-    console.log(displayText);
-    console.log();
     console.log();
     console.log("1 - View Available Pets in Shelter");
     console.log();
@@ -96,8 +88,7 @@ function printStartMenu() {
     console.log("q - Quit Game");
     console.log();
 }
-
-const printPetStats = () => {
+function interactWithPet() {
     console.log();
     console.log("What would you like to do?");
     console.log();
@@ -111,8 +102,7 @@ const printPetStats = () => {
     console.log();
     console.log("5 - Rename Pet");
 }
-
-const printPetCages = () => {
+function cleanCage() {
     console.log("Clean Cage?");
     console.log();
     console.log("1 - Clean The Poop!");
