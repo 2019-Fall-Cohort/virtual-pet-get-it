@@ -1,5 +1,5 @@
 class Pet { 
-    constructor(name="Jessica", id){
+    constructor(name = "Jessica", id){
         if (this.constructor == Pet) {
             throw new Error("Don't use this Class, what're you thinking?");
         }

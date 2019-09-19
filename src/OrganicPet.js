@@ -34,6 +34,7 @@ class OrganicPet extends Pet {
             this.isSick = true;
         }
     }
+    //tick method potentially a property, not a function...
     tick() {
         this.gettingHungry();
         this.gettingSick();

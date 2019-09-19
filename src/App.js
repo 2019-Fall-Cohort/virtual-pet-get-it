@@ -20,9 +20,9 @@ class App {
             this.startGame()
             return;
         } else {
-            let displayText = "*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~\n" +
+            let displayText = "*~*~*~*~*~*~*~*~*~*~*~*~*~*~*\n" +
             "~ Awesome Virtual Pet Amok! ~\n" +
-            " *~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~";
+            "*~*~*~*~*~*~*~*~*~*~*~*~*~*~*";
             console.log(displayText);
             let startCount = 0
             let startQuestion = " Start the Game?\n y/n > ";
